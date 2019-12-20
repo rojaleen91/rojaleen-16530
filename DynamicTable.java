@@ -8,8 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
-import java.util.function.Predicate;
-import java.util.stream.*;
+
 
 public class DynamicTable {
 
@@ -51,10 +50,12 @@ public class DynamicTable {
         // Fetch Specific value (user-defind) from rows and column
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter row no: ");
         int rownumber = sc.nextInt();
-        System.out.println("Enter the row no: " + rownumber);
+        System.out.println("Enterd  row no: " + rownumber);
+        System.out.println("Enter column no: ");
         int columnnumber = sc.nextInt();
-        System.out.println("Enter the column no: " + columnnumber);
+        System.out.println("Entered column no: " + columnnumber);
         List<WebElement> columncount = rowCount.get(rownumber).findElements(By.tagName("td"));
         System.out.println(columncount.get(columnnumber).getText());
 

@@ -18,6 +18,7 @@ public class AmazonRegisterUserUpdated {
 
         String baseURL = "https://www.amazon.in/";
         driver.get(baseURL);
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         //Click sign in button
